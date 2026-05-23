@@ -1,0 +1,102 @@
+/* Configurações Globais do Painel */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #eef2f5;
+    color: #222;
+    padding: 30px 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header h1 {
+    font-size: 26px;
+    color: #2c3e50;
+}
+
+/* Painel de Indicadores de Cima (Dashboard) */
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box {
+    background: #fff;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    text-align: center;
+}
+
+.box h3 {
+    font-size: 36px;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.box p {
+    color: #7f8c8d;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Layout em Duas Colunas (Estoque e Logs XML) */
+.conteudo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.painel {
+    background: #fff;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.painel h2 {
+    font-size: 20px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f1f3f5;
+}
+
+/* Itens de Insumos */
+.item {
+    padding: 15px 0;
+    border-bottom: 1px solid #f1f3f5;
+}
+
+.item:last-child {
+    border-bottom: none;
+}
+
+/* Responsividade do Painel */
+@media (max-width: 900px) {
+    .conteudo {
+        grid-template-columns: 1fr;
+    }
+}
