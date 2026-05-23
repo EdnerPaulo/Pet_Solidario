@@ -11,7 +11,7 @@ load_dotenv()
 app = Flask(__name__, template_folder="../templates", static_folder="../static")
 
 # Configuração e higienização da string de conexão do Neon.tech para o SQLAlchemy Puro
-DATABASE_URL = os.environ.get('DATABASE_URL', 'postgresql://usuario:senha@ep-vagas-neon.aws.neon.tech/neondb?sslmode=require')
+DATABASE_URL = os.environ.get('DATABASE_URL', 'postgresql://neondb_owner:npg_Hgdx96wbONcA@ep-divine-sunset-aqvyhf3j-pooler.c-8.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require')
 if DATABASE_URL.startswith("postgres://"):
     DATABASE_URL = DATABASE_URL.replace("postgres://", "postgresql://", 1)
 
